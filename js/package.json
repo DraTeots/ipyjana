@@ -1,0 +1,40 @@
+{
+  "name": "ipyjana",
+  "version": "0.1.3",
+  "description": "Jana widget",
+  "author": "Dmitry Romanov",
+  "main": "lib/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/epic/ipyjana.git"
+  },
+  "keywords": [
+    "jupyter",
+    "widgets",
+    "ipython",
+    "ipywidgets",
+    "jupyterlab-extension"
+  ],
+  "files": [
+    "lib/**/*.js",
+    "dist/*.js"
+  ],
+  "scripts": {
+    "clean": "rimraf dist/",
+    "prepublish": "webpack",
+    "build": "webpack",
+    "watch": "webpack --watch --mode=development",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "webpack": "^3.5.5",
+    "rimraf": "^2.6.1"
+  },
+  "dependencies": {
+    "@jupyter-widgets/base": "^2.0.1",
+    "lodash": "^4.17.4"
+  },
+  "jupyterlab": {
+    "extension": "lib/labplugin"
+  }
+}
